@@ -1,0 +1,159 @@
+:root{
+    --padding: 8%;
+}
+*{
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: linear-gradient(#200016,#10001f);
+  }
+  a{
+    text-decoration: none;
+    color: #fff;
+}
+  header{
+    position: fixed;
+    width: 95%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+header .logo{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+header ul li{
+    margin-right: 30px;
+}
+header ul li a{
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+header ul li a:hover, .active{
+    background: #fff;
+    color :#200016;
+}
+
+.content{
+    
+  flex-grow: 1;
+  padding: var(--padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+  .social{
+    margin-top: 10rem;
+    margin-left: 6rem;
+}
+.social a{
+    text-decoration: none;
+}
+
+.social img{
+    margin-right: 5rem;
+    width: 10rem;
+    transition: 0.4s;
+margin: 100px;
+}
+.social img:hover{
+    transform: scale(1.2);
+}
+
+#menu{
+  display: none;
+  position: relative;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  user-select: none;
+}
+#menu span{
+  display: block;
+  width: 33px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 6px;
+  transform-origin: 0 0;
+  transition: 0.4s;
+  margin-bottom: 5px;
+}
+#menu.is-active span:nth-child(1) {
+ transform: translate(0px,-2px) rotate(45deg);
+}
+#menu.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+#menu.is-active span:nth-child(3) {
+  transform: translate(-3px, 3px) rotate(-45deg);
+}
+#menu.is-active span{
+  background-color: linear-gradient(#200016,#10001f);
+}
+
+@media screen and ( max-width: 575px){
+  :root {
+      --padding: 1.5rem;
+  }
+  header{
+      position: fixed;
+      top: 0;
+      left: 1px;
+      right: 0;
+      height: 82px;
+      padding-top: 0;
+      border-bottom: 1px solid #0e0e0e;
+      z-index: 100;
+  }
+  header .logo{
+      font-size: 30px;
+      text-transform: uppercase;
+  }
+  header ul{
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(#200016,#10001f);
+      }
+      header ul.is-active{
+      display: block;
+}
+header ul li {
+  display: block;
+  text-align: center;
+  margin: 75px;
+  margin-top: 90px;
+  margin-right: 9rem;
+}
+#menu {
+  display: block;
+  margin-right: 5rem
+}
+.social img{
+  margin-right: 5rem;
+  width: 40%;
+  transition: 0.4s;
+margin: 40px;
+}
+}
